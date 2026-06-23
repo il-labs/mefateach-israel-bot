@@ -12,7 +12,13 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "rootDir": "."
+    "rootDir": ".",
+    "paths": {
+      "@mifal-israel/shared-types": ["packages/shared-types/src"],
+      "@mifal-israel/utils": ["packages/utils/src"],
+      "@mifal-israel/api-client": ["packages/api-client/src"],
+      "@mifal-israel/feature-flags": ["packages/feature-flags/src"]
+    }
   },
   "exclude": ["node_modules", "dist"]
 }
