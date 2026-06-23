@@ -14,7 +14,7 @@
     "forceConsistentCasingInFileNames": true,
     "rootDir": ".",
     "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
+    "ignoreDeprecations": "5.0",
     "paths": {
       "@mifal-israel/shared-types": ["packages/shared-types/src"],
       "@mifal-israel/utils": ["packages/utils/src"],
