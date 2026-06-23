@@ -1,0 +1,14 @@
+{
+  "name": "@mifal-israel/scripts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "auto-commit": "ts-node auto-commit.ts"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.12"
+  }
+}

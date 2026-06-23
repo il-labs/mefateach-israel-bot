@@ -1,0 +1,26 @@
+{
+  "name": "@mifal-israel/feature-flags",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openfeature/server-sdk": "^1.11.0",
+    "@openfeature/web-sdk": "^1.8.0",
+    "axios": "^1.6.0",
+    "@mifal-israel/shared-types": "workspace:*",
+    "@mifal-israel/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

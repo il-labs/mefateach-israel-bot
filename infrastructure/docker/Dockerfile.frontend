@@ -1,0 +1,16 @@
+FROM node:22-alpine AS base
+RUN npm install -g pnpm
+ENV CI=true
+
+FROM base AS builder
+WORKDIR /app
+COPY . .
+RUN pnpm install --frozen-lockfile
+RUN pnpm run build --filter=@mifal-israel/frontend...
+
+FROM base AS runner
+WORKDIR /app
+COPY --from=builder /app /app
+EXPOSE 3000
+WORKDIR /app/apps/frontend
+CMD ["pnpm", "start"]

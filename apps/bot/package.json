@@ -1,0 +1,27 @@
+{
+  "name": "@mifal-israel/bot",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "@openfeature/server-sdk": "^1.11.0",
+    "@mifal-israel/feature-flags": "workspace:*",
+    "@mifal-israel/api-client": "workspace:*",
+    "@mifal-israel/utils": "workspace:*",
+    "zod": "^3.23.8",
+    "pino": "^9.1.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}

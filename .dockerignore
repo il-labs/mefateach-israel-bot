@@ -1,0 +1,13 @@
+node_modules
+.git
+.turbo
+dist
+.next
+out
+git-export
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
