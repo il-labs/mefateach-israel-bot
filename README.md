@@ -1,64 +1,47 @@
-# Mifal Israel Monorepo
+# Mefateach Israel Discord Bot
 
-This is a monorepo for the Mifal Israel project, featuring a backend API, a Discord bot, and a frontend application.
+בוט Discord רשמי ועצמאי עבור קהילת **מפתח.ישראל**.
 
-## Structure
+## 🚀 תכונות הבוט
 
-- `apps/backend`: Express.js API with Prisma and OpenFeature.
-- `apps/bot`: Discord bot using discord.js.
-- `apps/frontend`: Next.js application.
-- `packages/api-client`: Shared API client for frontend and bot.
-- `packages/feature-flags`: Shared feature flag configuration and providers.
-- `packages/shared-types`: Shared TypeScript types.
-- `packages/utils`: Shared utility functions and logger.
-- `infrastructure/docker`: Docker and Docker Compose configuration.
-- `infrastructure/scripts`: Maintenance and automation scripts.
+- 🌐 **בקשת תת-דומיינים (`/request`):** הגשת בקשות לרישום תת-דומיין חדש תחת `מפתח.ישראל`.
+- 📋 **הצגת בקשות אישיות (`/myrequests`):** צפייה בסטטוס הבקשות שהוגשו על ידי המשתמש.
+- 👑 **ניהול מנהלים (`/adminlist`, `/adminapprove`, `/adminreject`):** צפייה, אישור ודחייה של בקשות על ידי מנהלי המערכת.
+- ℹ️ **מידע וקהילה (`/about`, `/rules`, `/faq`, `/contact`, `/website`, `/ping`, `/status`, `/help`).**
 
-## Prerequisites
+## 🛠️ דרישות מוקדמות
 
-- [Node.js](https://nodejs.org/) (v20 or later)
-- [pnpm](https://pnpm.io/)
-- [Docker](https://www.docker.com/) and Docker Compose
+- Node.js (גרסה 18 ומעלה)
+- npm / pnpm / yarn
 
-## Getting Started
+## 🔧 התקנה והרצה
 
-### Local Development
-
-1. Install dependencies:
+1. **התקנת תלויות:**
    ```bash
-   pnpm install
+   npm install
    ```
 
-2. Set up environment variables:
-   Copy `.env.example` to `.env` in `apps/backend` and `apps/bot`, and fill in the required values.
-
-3. Run the development environment:
-   ```bash
-   pnpm dev
+2. **הגדרת משתני סביבה:**
+   העתק את הקובץ `.env.example` לקובץ `.env` ומלא את פרטי הבוט של דיסקורד:
+   ```env
+   DISCORD_TOKEN=your_token
+   DISCORD_CLIENT_ID=your_client_id
+   DISCORD_GUILD_ID=your_guild_id
    ```
 
-### Docker
+3. **הרצה במצב פיתוח:**
+   ```bash
+   npm run dev
+   ```
 
-To run the entire stack using Docker:
+4. **בנייה והרצה בייצור (Production):**
+   ```bash
+   npm run build
+   npm start
+   ```
 
-```bash
-docker-compose -f infrastructure/docker/docker-compose.yml up --build
-```
-
-## Infrastructure
-
-### Auto-Commit Script
-
-A script is provided to automatically commit changes as you work. This is useful for development environments where you want to keep a granular history of changes.
-
-To run the auto-commit script:
+## 🐳 הרצה עם Docker
 
 ```bash
-cd infrastructure/scripts
-pnpm install
-pnpm auto-commit
+docker-compose up --build -d
 ```
-
-## License
-
-Private.

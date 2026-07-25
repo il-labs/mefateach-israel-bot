@@ -1,26 +1,23 @@
 {
-  "name": "mifal-israel-monorepo",
-  "private": true,
-  "version": "0.1.0",
-  "packageManager": "pnpm@11.1.0",
+  "name": "mefateach-israel-bot",
+  "version": "1.0.0",
+  "description": "Standalone Discord Bot for Mefateach Israel subdomain registration and community commands",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
-    "typecheck": "turbo run typecheck",
-    "auto-commit": "pnpm --filter @mifal-israel/scripts run start"
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "pino": "^9.1.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "turbo": "^2.0.0",
-    "typescript": "^6.0.3",
-    "prettier": "^3.0.0",
-    "eslint": "^10.5.0"
-  },
-  "onlyBuiltDependencies": [
-    "@prisma/client",
-    "@prisma/engines",
-    "prisma",
-    "unrs-resolver"
-  ]
+    "@types/node": "^20.12.12",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
 }
